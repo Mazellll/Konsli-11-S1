@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="navbar" id="navbar">
+                <li><a href="index.html">Profile</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main">
+        <div class="container">
+            <div class="profile-pic">
+                <img src="foto.jpg" alt="Foto">
+            </div>
+            <div class="profile-info">
+                <h1 id = "perkenalan">Selamat Datang!</h1>
+                <h2>Saya, Mazel Arya Putra Pradana</h2>
+                <h2 id="siswa">Siswa SMKN 1 Surabaya</h2>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        siswa.remove();
+
+        const navbar = document.getElementById("navbar");
+        const nav1 = document.createElement("li");
+        nav1.textContent = "DOM";
+        navbar.appendChild(nav1);
+
+        const perkenalan = document.getElementById("perkenalan")
+        perkenalan.textContent = "Haloo"
+    </script>
+
+</body>
+</html>

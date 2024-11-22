@@ -1,0 +1,16 @@
+Algoritma perulangan
+
+1. Inisialisasi Array :
+    buat Array Data untuk menyimpan data stok
+
+2. Input Jumlah Stok :
+    - Tampilan prompt akan meminta pengguna untuk mengisi stok yang ingin dimasukkan. Gunakan fungsi prompt untuk meminta input dari pengguna.
+    - Simpan hasil input pengguna ke dalam variable stok
+
+3. Mengisi Nama Barang :
+    - Lakukan perulangan dari 1 hingga jumlah stok yang telah dimasukkan oleh pengguna.
+    - Pada setiap iterasi perulangan, ambil input nama buah dari pengguna menggunakan prompt.
+    - Masukkan nama buah yang diperoleh ke dalam Array stok menggunakan metode push.
+
+4. Menampilkan Tabel Stok :
+    - Setelah perulangan selesai, tampilkan isi Array stok dalam bentuk tabel menggunakan console.table

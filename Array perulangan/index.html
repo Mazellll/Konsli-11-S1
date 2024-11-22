@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas</title>
+</head>
+<body>
+    <script>
+        //Array untuk menyimpan data
+        let Data = [];
+
+        //mengisi jumlah stok buah
+        let stok = parseInt(
+            prompt("Masukkan jumlah stok buah")
+        );
+
+        //loop untuk memasukkan data
+        for (let i = 0; i < stok; i++) {
+
+            //mengisi nama buah
+            let buah = prompt("Masukkan nama buah ke-" + (i + 1) + ":");
+
+            //mengisi jumlah buah
+            let jumlahbuah = parseInt(
+                prompt("Masukkan jumlah buah " + buah + ":")
+            );
+
+            //menyimpan data dalam bentuk objek
+            Data.push({nama: buah, jumlah: jumlahbuah});
+        }
+
+        //menampilkan data di console
+        console.table(Data)
+    </script>
+</body>
+</html>

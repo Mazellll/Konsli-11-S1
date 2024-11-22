@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar DOM</title>
+</head>
+<body>
+    <h1 id = "title">Belajar DOM</h1>
+    <p id="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis 
+        quae voluptatibus molestias incidunt tempore rem facere omnis tempora? Quia, soluta? Quo suscipit 
+        vero beatae quibusdam dolorum temporibus hic iusto laudantium.
+    </p>
+
+    <script>
+        const title = document.getElementById("title");
+        title.textContent = "Learning DOM";
+
+        const description = document.getElementById("description");
+        description.textContent = "Selamat belajar DOM"
+
+        const coment = document.createElement("p");
+        coment.textContent = "Artikelnya sungguh yanto"
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Masukkan Username</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <button type="submit">Masuk</button>
+        </form>
+    </div>
+
+    <script>
+        // Mengisi username terakhir secara otomatis pada halaman login
+        document.addEventListener('DOMContentLoaded', () => {
+            const lastUsername = localStorage.getItem('username');
+            if (lastUsername) {
+                document.getElementById('username').value = lastUsername;
+            }
+        });
+
+        // Login dan simpan username ke localStorage
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            if (username) {
+                localStorage.setItem('username', username);
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

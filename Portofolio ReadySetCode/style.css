@@ -1,0 +1,198 @@
+/* Default styles for desktop */
+header {
+    background-color: #c05605;
+    color: #fff;
+    padding: 0px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0 12px;
+    list-style: none;
+}
+
+body {
+    background-color: #dddddd;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin: 40px 5%;
+}
+
+#intro {
+    display: flex;
+    gap: 24px;
+    border-bottom: 1px solid #c05605;
+    padding-bottom: 24px;
+}
+
+#intro img {
+    width: 300px;
+    height: 300px;
+}
+
+#intro h2 {
+    font-size: 48px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.project {
+    border: solid 2px black;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#image {
+    height: 180px;
+    border: solid 1.5px black;
+}
+
+.project:hover {
+    box-shadow: 7px 5px #c05605;
+    transform: scale(1.05);
+    transition-duration: 200ms;
+}
+
+.form-inp {
+    text-align: center;
+    border: solid black;
+    border-radius: 15px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "tittle tittle tittle tittle"
+                         "email email no no"
+                         "message message message message"
+                         "option option option option"
+                         "btn btn btn btn";
+}
+
+#text-form {
+    grid-area: tittle;
+}
+
+#email-inp {
+    grid-area: email;
+    padding: 10px;
+    margin: 5px;
+}
+
+#no-inp {
+    grid-area: no;
+    padding: 10px;
+    margin: 5px;
+}
+
+#message-inp {
+    grid-area: message;
+    height: 100px;
+    margin: 5px;
+}
+
+#option-inp {
+    grid-area: option;
+    padding: 10px;
+    margin: 5px;
+}
+
+#btn-inp {
+    grid-area: btn;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #c05605;
+    color: white;
+    cursor: pointer;
+}
+
+#btn-inp:active {
+    background-color: orange;
+    border: none;
+}
+
+footer {
+    text-align: center;
+    background-color: #c05605;
+    color: white;
+    padding: 5px;
+}
+
+/* CODE RESPONSIVE */
+@media (max-width: 1200px) {
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    #intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #intro img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .form-inp {
+        grid-template-columns: 1fr;
+        grid-template-areas: "tittle"
+                             "email"
+                             "no"
+                             "message"
+                             "option"
+                             "btn";
+    }
+}
+
+@media (max-width: 480px) {
+    #intro h2 {
+        font-size: 32px;
+    }
+
+    #intro img {
+        width: 150px;
+        height: 150px;
+    }
+
+    section {
+        margin: 20px 5%;
+    }
+}

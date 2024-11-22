@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input = prompt(`
+        Pilih konversi panjang (1/5)  : 
+        1. Sentimeter ke Meter
+        2. Meter ke Sentimeter
+        3. Kilometer ke Meter
+        4. Meter ke Kilometer
+        5. Kilogram ke Gram
+        `);
+        //1. CM to M
+        if(input == '1'){
+            let satuan = parseInt(prompt('Masukkan satuan sentimeter : '));
+            function cmtom(satuan){
+                satuan /= 100;
+                alert(`${satuan} Meter`)
+            }
+            cmtom(satuan);
+
+        //2. M to CM
+        }else if(input == '2'){
+            let satuan = parseInt(prompt('Masukkan satuan meter : '))
+            function mtocm(satuan){
+                satuan *= 100;
+                alert(`${satuan} Sentimeter`);
+            }
+            mtocm(satuan);
+
+        //3. KM to M
+        }else if(input == '3'){
+            let satuan = parseInt(prompt('Masukkan satuan kilometer : '))
+            function kmtom(satuan){
+                satuan *= 1000;
+                alert(`${satuan} Meter`);
+            }
+            kmtom(satuan);
+        
+        //4. M to KM
+        }else if(input == '4'){
+            let satuan = parseInt(prompt('Masukkan satuan meter : '))
+            function mtokm(satuan){
+                satuan /= 1000;
+                alert(`${satuan} Kilometer`);
+            }
+            mtokm(satuan);
+        
+        //5. KG to G
+        }else if(input == '5'){
+            let satuan = parseInt(prompt('Masukkan satuan kilogram : '))
+            function kgtog(satuan){
+                satuan *= 1000;
+                alert(`${satuan} Gram`);
+            }
+            kgtog(satuan);
+
+        }else if(input == 'otnay'){
+            alert("OTNAY OTNAY（づ￣3￣）づ╭❤️～  ○|￣|_ <==8 SIGMA KELAS KELAS MANDAR")
+        }else
+            (alert('Tidak ada')
+        )
+    </script>
+</body>
+</html>
